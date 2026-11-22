@@ -59,6 +59,13 @@ RestartApplications=no
 Name: "en"; MessagesFile: "compiler:Default.isl"
 Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
+; Chinese (Simplified) is not one of the translations that come with the compiler,
+; so it travels with this repository. The file is Inno Setup's own
+; ChineseSimplified.isl (maintained by Zhenghan Yang), taken from the translations
+; Inno keeps beside the compiler's sources:
+; https://github.com/jrsoftware/issrc/tree/is-6_7_1/Files/Languages/Unofficial
+; Windows in a Chinese locale picks it on its own.
+Name: "zh"; MessagesFile: "ChineseSimplified.isl"
 
 ; The texts of our own: the page that fetches .NET and what it says when that fails.
 ; This file is saved as UTF-8 with a BOM, which is how Inno Setup reads it as Unicode.
@@ -75,6 +82,10 @@ ru.RuntimeTitle=Подготовка Taskbar Groups Fluent
 ru.RuntimeText=Загрузка .NET 10 Desktop Runtime, необходимого для работы…
 ru.RuntimeNotStarted=Не удалось запустить установщик .NET 10 Desktop Runtime.
 ru.RuntimeNotDownloaded=Не удалось загрузить .NET 10 Desktop Runtime. Установите его с https://dotnet.microsoft.com/download/dotnet/10.0 и запустите установку снова.
+zh.RuntimeTitle=正在准备 Taskbar Groups Fluent
+zh.RuntimeText=正在下载运行所需的 .NET 10 Desktop Runtime…
+zh.RuntimeNotStarted=无法启动 .NET 10 Desktop Runtime 安装程序。
+zh.RuntimeNotDownloaded=无法下载 .NET 10 Desktop Runtime。请从 https://dotnet.microsoft.com/download/dotnet/10.0 安装后重新运行安装程序。
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
